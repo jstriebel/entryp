@@ -1,9 +1,11 @@
 [tool.poetry]
-name = "main"
-version = "0.1.0"
+name = "main-entrypoint"
+version = "0.1.2"
 description = ""
 authors = ["Jonathan Striebel"]
 license = "MIT"
+readme = "README.md"
+repository = "https://github.com/jstriebel/main-entrypoint"
 
 [tool.poetry.dependencies]
 python = "^3.7"

@@ -1,9 +1,9 @@
-# main
+# main-entrypoint
 
 A decorator to avoid `if __name__ == "__main__":`
 
 ```python
-from main import entrypoint
+from main_entrypoint import entrypoint
 
 @entrypoint
 def main():
@@ -16,4 +16,10 @@ Hello World
 
 $ python -c "import my_script"
 # no output
+```
+
+## Installation
+
+```bash
+pip install main-entrypoint
 ```
