@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "main"
+version = "0.1.0"
+description = ""
+authors = ["Jonathan Striebel"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+typing-extensions = "^4.2.0"
+
+[tool.poetry.dev-dependencies]
+black = "^22.3.0"
+isort = "^5.10.1"
+mypy = "^0.950"
+pylint = "^2.13.9"
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+namespace_packages = true
+strict_equality = true
+show_error_codes = true
+disallow_untyped_defs = true
+no_implicit_optional = true
+
+[tool.pylint."MESSAGES CONTROL"]
+disable = ["exec-used", "C"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
