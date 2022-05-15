@@ -4,7 +4,7 @@
 [![Supported Python Versions](https://img.shields.io/pypi/pyversions/main-entrypoint.svg)](https://pypi.python.org/pypi/main-entrypoint)
 [![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-A decorator to avoid `if __name__ == "__main__":`
+A decorator to avoid `if __name__ == "__main__":`, instead use
 
 ```python
 from main_entrypoint import entrypoint
