@@ -1,4 +1,4 @@
-# entryp (@entryp.oint)
+# @entryp.oint
 
 [![PyPI version](https://img.shields.io/pypi/v/entryp)](https://pypi.python.org/pypi/entryp)
 [![Supported Python Versions](https://img.shields.io/pypi/pyversions/entryp.svg)](https://pypi.python.org/pypi/entryp)
