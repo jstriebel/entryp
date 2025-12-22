@@ -53,6 +53,21 @@ def main():
 
 `immediate` calls the decorated function immediately, entities defined later in the module will not be available, so moving the function to the end of the module is encouraged. `first_rerun_remaining` will effectively run everything after the decorated function twice, so the code should be free of side-effects and preferably only consist of definitions in this case. The default mode is `at_exit` and should be considered as a first choice.
 
+## Development
+
+Run the following commands for code quality checks:
+
+```bash
+# Type checking with mypy
+uv run mypy entryp
+
+# Linting and formatting with ruff
+uv run ruff check           # Check for linting issues
+uv run ruff check --fix     # Fix auto-fixable issues
+uv run ruff format --check  # Check formatter changes
+uv run ruff format          # Format code
+```
+
 ## Future Work
 
 - [ ] tests

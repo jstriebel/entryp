@@ -50,21 +50,19 @@ _F = TypeVar("_F", bound=Callable)
 @overload
 def entrypoint(
     func: _F, *, mode: Union[EntrypointMode, str] = EntrypointMode.AT_EXIT
-) -> _F:
-    ...
+) -> _F: ...
 
 
 @overload
 def entrypoint(
     func: None, *, mode: Union[EntrypointMode, str] = EntrypointMode.AT_EXIT
-) -> Callable[[_F], _F]:
-    ...
+) -> Callable[[_F], _F]: ...
 
 
 def entrypoint(
     func: Optional[_F] = None,
     *,
-    mode: Union[EntrypointMode, str] = EntrypointMode.AT_EXIT
+    mode: Union[EntrypointMode, str] = EntrypointMode.AT_EXIT,
 ) -> Union[_F, Callable[[_F], _F]]:
     mode = EntrypointMode(mode)
 
@@ -90,7 +88,7 @@ def entrypoint(
             if len(_entrypoint_stack) == 0:
                 atexit.register(_run_exit_stack)
                 atexit.register(_run_entrypoint_stack)
-                atexit.register = _add_to_exit_stack
+                atexit.register = _add_to_exit_stack  # type: ignore[assignment]
             _add_to_entrypoint_stack(func)
         elif mode == EntrypointMode.FIRST_RERUN_REMAINING:
             source = inspect.getsource(calling_module)
